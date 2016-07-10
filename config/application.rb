@@ -6,6 +6,7 @@ require "active_model/railtie"
 require "active_job/railtie"
 require "active_record/railtie"
 require "action_controller/railtie"
+require_relative '../lib/classifier/data_parser'
 # require "action_mailer/railtie"
 # require "action_view/railtie"
 # require "action_cable/engine"
@@ -26,6 +27,6 @@ module SheldonApi
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
-    config.autoload_paths << Rails.root.join('lib')
+    # config.autoload_paths << Rails.root.join('lib')
   end
 end
