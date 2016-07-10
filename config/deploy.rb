@@ -10,8 +10,8 @@ set :rvm_type, :user
 set :rvm_ruby_version, '2.3.0@sheldonbot'
 
 # Passenger setup
-set :passenger_restart_command, 'touch tmp/restart.txt'
-set :passenger_restart_options, {}
+# set :passenger_restart_command, 'touch tmp/restart.txt'
+# set :passenger_restart_options, {}
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
