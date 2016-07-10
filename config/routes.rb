@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  match 'receive' => 'bot#receive', via: [:get]
+  root to: 'application#index'
+  mount Facebook::Messenger::Server, at: 'bot'
 end
