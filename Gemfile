@@ -8,6 +8,15 @@ gem 'jbuilder', '~> 2.5'
 gem 'facebook-messenger', '~> 0.8.0'
 gem 'listen'
 
+group :development do
+  gem 'capistrano'
+  gem 'capistrano-puma'
+  gem 'capistrano-rvm'
+  gem 'capistrano-bundler', '~> 1.1.2'
+  gem 'capistrano-passenger'
+  gem 'capistrano-rails', '~> 1.1'
+end
+
 group :development, :test do
   gem 'pry'
 end
