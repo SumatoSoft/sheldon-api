@@ -7,6 +7,7 @@ gem 'dotenv-rails', '~> 2.1.1'
 gem 'jbuilder', '~> 2.5'
 gem 'facebook-messenger', '~> 0.8.0'
 gem 'listen'
+gem 'open4', '~> 1.3.4'
 
 group :development do
   gem 'capistrano'
