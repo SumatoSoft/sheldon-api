@@ -8,11 +8,11 @@ pidfile "/var/www/sheldonbot/shared/tmp/pids/puma.pid"
 state_path "/var/www/sheldonbot/shared/tmp/pids/puma.state"
 stdout_redirect '/var/www/sheldonbot/shared/log/puma_access.log', '/var/www/sheldonbot/shared/log/puma_error.log', true
 
-threads 0,16
+threads 8,16
 
 bind 'unix:///var/www/sheldonbot/shared/tmp/sockets/puma.sock'
 
-workers 0
+workers 2
 
 prune_bundler
 

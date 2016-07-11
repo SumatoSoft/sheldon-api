@@ -6,7 +6,7 @@ module Classifier
       def query(query)
         Rails.logger.info query
         output = nil
-        Open4::popen4("/home/sheldon/anaconda2/bin/python #{ENV['PYTHON_FILE_PATH']}/sumatobot_ready.py '#{query}'") do |pid, stdin, stdout, stderr|
+        Open4::popen4("bash -l -c '/home/sheldon/anaconda2/bin/python #{ENV['PYTHON_FILE_PATH']}/sumatobot_ready.py \"#{query}\"'") do |pid, stdin, stdout, stderr|
           output = stdout.read.strip
           Rails.logger.info "pid        : #{pid}"
           Rails.logger.info "stdout     : #{output}"
